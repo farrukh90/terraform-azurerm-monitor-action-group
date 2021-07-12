@@ -1,7 +1,3 @@
-# Usage
-### This module creates Azure Monitor Action Group with Email 
-
-```
 provider "azurerm" {
   features {}
 }
@@ -20,7 +16,7 @@ module "rg" {
 
 module "actiongroup" {
     depends_on = [module.rg]
-    source = "farrukh90/monitor-action-group/azurerm""
+    source = "../"
     resource_group_name     = module.rg.resource_group_name
     actiongroup_name        = "actiongroup"
     email_address           = "email@gmail.com"
@@ -31,6 +27,5 @@ module "actiongroup" {
     Team        = "DevOps"
     Department  = "IT"
     }
+    
 }
-
-```
