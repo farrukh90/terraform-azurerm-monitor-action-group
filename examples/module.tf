@@ -12,7 +12,7 @@ module "actiongroup" {
   depends_on          = [azurerm_resource_group.example]
   source              = "../"
   resource_group_name = azurerm_resource_group.example.name
-  actiongroup_name    = "actiongroup"
+  name                = "actiongroup"
   email_address       = "email@gmail.com"
 
   tags = {
@@ -25,4 +25,8 @@ module "actiongroup" {
 
 output id {
   value = module.actiongroup.id
+}
+
+output name {
+  value = module.actiongroup.name
 }

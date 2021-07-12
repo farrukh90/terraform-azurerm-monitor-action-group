@@ -3,9 +3,9 @@ data "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_monitor_action_group" "main" {
-  name                = var.actiongroup_name
+  name                = var.name
   resource_group_name = data.azurerm_resource_group.rg.name
-  short_name          = var.actiongroup_name
+  short_name          = var.name
 
   email_receiver {
     name          = "sends_an_email"

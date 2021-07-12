@@ -1,5 +1,5 @@
-actiongroup_name        = "actiongroup"
-email_address           = "email@gmail.com"
+name          = "actiongroup"
+email_address = "email@gmail.com"
 
 tags = {
   Name        = "Alert"

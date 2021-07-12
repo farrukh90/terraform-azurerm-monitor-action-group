@@ -4,7 +4,7 @@ variable "resource_group_name" {
 }
 
 variable "email_address" {}
-variable "actiongroup_name" {}
+variable "name" {}
 variable "tags" {
   type = map
 }
