@@ -6,16 +6,9 @@ provider "azurerm" {
   features {}
 }
 
-module "rg" {
-  source   = "farrukh90/resource-group/azurerm"
-  name     = "dev"
-  location = "westus2"
-  tags = {
-    Name        = "Alert"
-    Environment = "Dev"
-    Team        = "DevOps"
-    Department  = "IT"
-  }
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
 }
 
 module "actiongroup" {
