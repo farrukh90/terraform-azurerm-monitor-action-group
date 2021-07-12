@@ -21,5 +21,8 @@ module "actiongroup" {
     Team        = "DevOps"
     Department  = "IT"
   }
+}
 
+output id {
+  value = module.actiongroup.id
 }
